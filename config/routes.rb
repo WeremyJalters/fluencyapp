@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  get 'homes/index'
+  
 
   devise_for :users
-  resources :users
+  resources :users, only: [:new, :create, :show]
+  resources :shouts, only: [:create, :show]
+  resource  :home, only: [:show]
+  resources :students
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'homes#welcome'
+   root 'homes#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

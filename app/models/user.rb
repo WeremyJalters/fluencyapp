@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :shouts
+  has_many :students
+
   attr_accessor :signin
   validates :username, :uniqueness => {:case_sensitive => false}
 
