@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book name:</strong>
+  <%= @book.book_name %>
+</p>
+
+<p>
+  <strong>Book level:</strong>
+  <%= @book.book_level %>
+</p>
+
+<p>
+  <strong>Total words:</strong>
+  <%= @book.total_words %>
+</p>
+
+<p>
+  <strong>Words wrong:</strong>
+  <%= @book.words_wrong %>
+</p>
+
+<p>
+  <strong>Self corrections:</strong>
+  <%= @book.self_corrections %>
+</p>
+
+<p>
+  <strong>Accuracy:</strong>
+  <%= @book.accuracy %>
+</p>
+
+<p>
+ <strong>Self Correction Rate:</strong>
+  <%= @book.scrate %>
+ </p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

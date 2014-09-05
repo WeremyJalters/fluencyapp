@@ -2,10 +2,18 @@ Rails.application.routes.draw do
   
 
   devise_for :users
-  resources :users, only: [:new, :create, :show]
+  resources :lessons
+  resources :books
+  resources :users, only: [:new, :create, :show] 
   resources :shouts, only: [:create, :show]
   resource  :home, only: [:show]
-  resources :students
+  resources :students do
+     resources :lessons
+     resources :books
+    end
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: 1
+  student_id: 1
+  reminder: MyString
+  reflection: MyString
+  present: false
+  cal_date: 2014-09-04 13:17:59
+  lesson_number: 1
+
+two:
+  student: 1
+  student_id: 1
+  reminder: MyString
+  reflection: MyString
+  present: false
+  cal_date: 2014-09-04 13:17:59
+  lesson_number: 1

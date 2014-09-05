@@ -1,8 +1,19 @@
-All the students here
-
-
+This is Where you'll enter new students, and go into each student's profile
+<div class="col-md-8"></div>
+<div class="col-md-4">
 <%= simple_form_for @student do |f| %>
   <%= f.input :first_name %> 
   <%= f.input :last_name %>
   <%= f.button :submit %>
   <%end%>
+  
+
+<% @students.each do |s| %>
+<table>
+
+
+	<%= link_to "#{s.first_name} #{s.last_name}", student_path(s) %>
+</table>
+
+<% end %>
+</div>

@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903215342) do
+ActiveRecord::Schema.define(version: 20140904225856) do
+
+  create_table "books", force: true do |t|
+    t.string   "book_name"
+    t.integer  "book_level"
+    t.integer  "total_words"
+    t.integer  "words_wrong"
+    t.integer  "self_corrections"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lessons", force: true do |t|
+    t.integer  "student"
+    t.integer  "student_id"
+    t.string   "reminder"
+    t.string   "reflection"
+    t.boolean  "present"
+    t.datetime "cal_date"
+    t.integer  "lesson_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "note"
+  end
 
   create_table "shouts", force: true do |t|
     t.string   "body"
